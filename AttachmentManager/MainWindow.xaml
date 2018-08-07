@@ -1,0 +1,24 @@
+﻿<Window x:Class="AttachmentManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AttachmentManager"
+        mc:Ignorable="d"
+        Title="Менеджер файлов вложений" Height="768" Width="1024" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="AttachmentIdsTextBox" PreviewTextInput="AttachmentIdsTextBox_OnPreviewTextInput" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Stretch" Width="514" AcceptsReturn="True" AcceptsTab="True" Height="Auto" Grid.ColumnSpan="2" Margin="0,26,0,0"/>
+        <Button x:Name="MakeArchive" Grid.ColumnSpan="2" Grid.Column="0" Content="Сформировать архив" HorizontalAlignment="Left" Margin="851,95,0,0" VerticalAlignment="Top" Width="142" Height="27" Click="MakeArchiveButton_Click"/>
+        <TextBox x:Name="AttachmentPath" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="626,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
+        <Label x:Name="AttachmentPathLabel" Grid.ColumnSpan="2" Content="Путь к файлам" HorizontalAlignment="Left" Margin="531,26,0,0" VerticalAlignment="Top" Height="28"/>
+        <Button x:Name="AttachmentDirectoryChooseBtn" Grid.ColumnSpan="2" Content="Выбрать..." HorizontalAlignment="Left" Margin="913,31,0,0" VerticalAlignment="Top" Width="80" Height="23" Click="AttachmentDirectoryChooseBtn_Click"/>
+        <TextBox x:Name="ArchivePath" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="626,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
+        <Label x:Name="ArchivePathLabel" Grid.ColumnSpan="2" Content="Путь к архиву" HorizontalAlignment="Left" Margin="531,54,0,0" VerticalAlignment="Top" Height="28"/>
+        <Button x:Name="ArchiveResultDirectoryChooseBtn" Grid.ColumnSpan="2" Content="Выбрать..." HorizontalAlignment="Left" Margin="913,59,0,0" VerticalAlignment="Top" Width="80" Height="23" Click="ArchiveResultDirectoryChooseBtn_Click"/>
+        <Label x:Name="AttachmentIdsLabel" Grid.ColumnSpan="2" Content="Идентификаторы вложений: через запятую/пробел/новая строка" HorizontalAlignment="Left" VerticalAlignment="Top" Height="28"/>
+    </Grid>
+</Window>
